@@ -6,9 +6,11 @@
  Version: 
  Changes made since last version:
 -->
-
-
 <?php
 
-Route::resource('user', 'UserController');
+Route::post('profile','UserController@profile');
 
+Route::group(['prefix' => 'webapi'], function () {
+    Route::post('profile','UserController@profile');
+    Route::resource('user', 'UserController');
+    });

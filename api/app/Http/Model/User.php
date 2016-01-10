@@ -7,7 +7,6 @@
  Changes made since last version:
 -->
 
-
 <?php 
 namespace App\Http\Model;
 
@@ -15,5 +14,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model 
 {
-    protected $table = 'user'; 
+    protected $table = 'profile'; 
 }

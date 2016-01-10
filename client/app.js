@@ -27,6 +27,16 @@ app.config(function($stateProvider, $urlRouterProvider,$mdThemingProvider,$mdIco
             }
         })
         
+        .state('profile', {
+            url: '/profile',
+            templateUrl: URL_PROFILE,
+            resolve: {
+            loadMyDirectives:function($ocLazyLoad){
+                return $ocLazyLoad.load(MODULE_USER_PROFILE);
+                }
+            }
+        })
+        
         .state('registration', {
             url: '/registration',
             templateUrl: URL_REGISTRATION,

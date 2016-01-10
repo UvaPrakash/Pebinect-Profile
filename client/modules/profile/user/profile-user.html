@@ -7,13 +7,80 @@
  Version: 
  Changes made since last version:
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="row" ng-controller="profileController" ng-cloak> 
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span class="center-block">Profile Settings</span>
+        </div>
+    </md-toolbar>
+    <form role=form ng-submit="profileSubmit()">
+        <div id="page_content_inner">
+        <md-content>
+            <md-card>
+                <md-card-header style="height: 180px;">
+                  <md-card-avatar style="width: 130px;">
+                    <img class="md-user-avatar" src="https://s.gravatar.com/avatar/6bcba7f3e4d5716ce2cd8d00cd1d00cc?s=300">
+                  </md-card-avatar>
+                  <md-card-header-text style="margin-top: 40px;">
+                    <span class="md-title" style="font-size: 20px;">Uva Prakash P</span>
+                    <span class="md-subhead">Systems Engineer</span>
+                  </md-card-header-text>
+                </md-card-header>
+                
+                <md-card-title>
+                  <div ng-cloak>
+                    <md-content class="md-padding">
+                      <md-tabs md-dynamic-height md-border-bottom md-swipe-content md-stretch-tabs="always">
+                        <md-tab label="Basic">
+                          <md-content class="md-padding">
+                            <h4 class="full_width_in_card_heading">General Info</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. ur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>User Name</label>
+                                    <input name="username" ng-model="profile_data.user_name">
+                                </md-input-container>
+                                <div flex="5" hide-xs hide-sm>
+                                  <!-- Spacer //-->
+                                </div>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Designation</label>
+                                    <input name="designation" ng-model="profile_data.designation">
+                                </md-input-container>
+                            </div>
+                            <md-input-container class="md-block">
+                                    <label>About</label>
+                                    <textarea ng-model="profile_data.about" columns="1" rows="5"></textarea>
+                            </md-input-container>
+                          </md-content>
+                        </md-tab>
+                        <md-tab label="Experience">
+                          <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Two</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                            <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                          </md-content>
+                        </md-tab>
+                        <md-tab label="Education">
+                          <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Three</h1>
+                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                          </md-content>
+                        </md-tab>
+                      </md-tabs>
+                    </md-content>
+                  </div>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="center">
+                  <md-button type="submit" class="md-raised md-primary">Save Changes</md-button>
+                  <md-button class="md-raised">Cancel</md-button>
+                </md-card-actions>
+                <br/>
+            </md-card>
+        </md-content>
+    </div>
+    </form>
+          
+</div>
+    

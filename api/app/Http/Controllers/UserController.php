@@ -10,12 +10,17 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
 use App\Http\Model\User;
 use App\Http\Service\UserService;
 use App\Http\Validator\UserValidator;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-class UserController 
+
+class UserController extends Controller
 {
    public function register(Request $request)
    {
@@ -46,4 +51,38 @@ class UserController
    {
         
    }
+   
+   public function profile(Request $request)
+        {
+            $user_name  = $request->user_name;
+            $designation   = $request->designation;
+            $about       = $request->about;
+            
+            
+     
+                $profile        = new User();
+            
+                $profile->user_name = $user_name;
+                $profile->designation  = $designation;
+                $profile->about      = $about;
+                
+                try
+                {
+                    $result = $profile->save();
+                    if($result)
+                    {
+                        $response = array("status"=>"Success","message"=>"Data Inserted Successfully");
+                    }
+                    else 
+                    {
+                        $response = array("status"=>"Failure","message"=>"Data Insertion Failure");
+                    }
+                } 
+                catch (Exception $ex) 
+                {
+                    $response = array("status"=>"Failure","message"=>"Error occurs please try again later","exception"=>$e);
+                }
+           
+           return json_encode($response);
+        }
 }

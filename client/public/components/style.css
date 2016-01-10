@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 2, 2016, 7:22:44 PM
+    Author     : Uva
+*/
+
+
+md-toolbar   {
+    background-color: #000000 !important;
+}
+
+.content    {
+    margin: 16px;
+    padding: 0;
+}
+
+#page_content_inner {
+    padding: 30px 25px 25px;
+}
+
+md-card    {
+    background-color: #FAFAFA !important;
+}
+
+.full_width_in_card_heading{
+    padding: 6px 24px;
+    background: rgba(0,0,0,.085);
+}
+
+md-tab {
+  max-width: 1000px !important;
+}

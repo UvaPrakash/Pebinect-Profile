@@ -1,31 +1,32 @@
 /* 
-* Description: Service for User Registration
+* Description:
 * Created on: Dec 27, 2015 
-* Modified on: Jan 01, 2016
-* Modified by: Uva
-* Version: 1.0
+* Modified on:
+* Modified by:  
+* Version: 
 * Changes made since last version:
 */
 
 (function () {
 
-    app.factory('userService', ['$q', '$http', userService]);
+    app.factory('profileService', ['$q', '$http', profileService]);
 
-    function userService($q, $http) {
+    function profileService($q, $http) {
         return {
-            userRegistration: userRegistration,
+            updateProfile: updateProfile,
         }
-        
-        function userRegistration(data) {
+
+        function updateProfile(data) {
             return $http({
                 method: 'POST',
                 data: data,
-                url: HOST + USER_REGISTRATION
+                url: HOST + USER_PROFILE
             }).then(function (response) {
                 return response.data;
             }).catch(function(error){
                return error.data; 
             });
         }
+
     }
 }());
